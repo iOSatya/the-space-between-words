@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="The Space Between Words"
-run/main_scene="res://Scenes/MainMenu.tscn"
+run/main_scene="res://Scenes/MainMenuScene.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://Scripts/Global.gd"
 
 [rendering]
 
