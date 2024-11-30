@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://nyf078f4lwd5"]
+[gd_scene load_steps=8 format=3 uid="uid://bqy5xip6pirod"]
 
+[ext_resource type="Script" path="res://Scripts/story_scene.gd" id="1_8xxud"]
 [ext_resource type="FontFile" uid="uid://u5ccc0dhtw56" path="res://Assets/Font/m5x7.ttf" id="1_cptxm"]
 [ext_resource type="Texture2D" uid="uid://dhiohuad1cm00" path="res://Assets/Backgrounds/Night.jpg" id="1_xt4hd"]
 [ext_resource type="Texture2D" uid="uid://c7gbmovj2o5ml" path="res://Assets/Backgrounds/Class.jpeg" id="3_ur47w"]
@@ -127,13 +128,36 @@ tracks/3/keys = {
 "update": 1,
 "values": [false, true]
 }
-tracks/4/type = "value"
+tracks/4/type = "method"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Night:visible")
+tracks/4/path = NodePath(".")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
+"times": PackedFloat32Array(3.5, 5, 6.5, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Night:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
 "times": PackedFloat32Array(0, 9),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
@@ -146,7 +170,9 @@ _data = {
 "opening": SubResource("Animation_deyiy")
 }
 
-[node name="Story" type="Node2D"]
+[node name="Story" type="Node2D" node_paths=PackedStringArray("animation_player")]
+script = ExtResource("1_8xxud")
+animation_player = NodePath("AnimationPlayer")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -165,7 +191,8 @@ grow_vertical = 0
 
 [node name="Vbox1" type="VBoxContainer" parent="UI/Panel"]
 layout_mode = 0
-offset_right = 1146.0
+offset_left = 59.0
+offset_right = 1120.0
 offset_bottom = 247.0
 
 [node name="Label" type="Label" parent="UI/Panel/Vbox1"]
@@ -185,6 +212,7 @@ scroll_active = false
 libraries = {
 "": SubResource("AnimationLibrary_yl2ih")
 }
+autoplay = "opening"
 
 [node name="Night" type="Sprite2D" parent="."]
 visible = false
