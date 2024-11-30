@@ -1,11 +1,244 @@
-[gd_scene format=3 uid="uid://dk0ay72xg4omf"]
+[gd_scene load_steps=9 format=3 uid="uid://bqy5xip6pirod"]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource type="Script" path="res://Scripts/StoryScript.gd" id="1_8xxud"]
+[ext_resource type="FontFile" uid="uid://u5ccc0dhtw56" path="res://Assets/Font/m5x7.ttf" id="1_cptxm"]
+[ext_resource type="Texture2D" uid="uid://dhiohuad1cm00" path="res://Assets/Backgrounds/Night.jpg" id="1_xt4hd"]
+[ext_resource type="PackedScene" uid="uid://bpodq8c4gqwej" path="res://Scenes/MainMenuScene.tscn" id="2_pgcna"]
+[ext_resource type="Texture2D" uid="uid://c7gbmovj2o5ml" path="res://Assets/Backgrounds/Class.jpeg" id="3_ur47w"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[sub_resource type="Animation" id="Animation_av035"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UI/Panel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UI/Panel/Vbox1/RichTextLabel:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("UI/Panel/Vbox1/RichTextLabel:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["A voice echoed, its source unknown, but it likely came from the red lights. Moments later, the lights began to move closer.
+"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Class:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Night:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+[sub_resource type="Animation" id="Animation_deyiy"]
+resource_name = "opening"
+length = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UI/Panel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 8.5, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UI/Panel/Vbox1/RichTextLabel:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(3, 4.5, 6, 7.5, 10, 11.5, 13, 14.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["In the midst of darkness, two red lights moved nimbly, as if observing their surroundings. When the lights became aware of someone’s presence, they paused momentarily.
+", "A voice echoed, its source unknown, but it likely came from the red lights. Moments later, the lights began to move closer.
+", "The closer the lights came, the clearer they became. They weren’t flames but a pair of glowing red eyes, shaped as if they were smiling.
+", "Without warning, the eyes lunged forward.
+", "In a quiet classroom, the only sound was the gentle whirring of a fan. A student was asleep at his desk. His hair was long, messy, and unkempt. His clothes were dull, and his overall appearance exuded a gloomy aura.
+", "The student jolted awake, as if he had just been chased by something terrifying. He looked around in confusion, trying to make sense of where he was. After a moment, he realized.
+", "Not long after, the classroom door opened. A beautiful girl walked in. Her skin was fair, and her bangs, which covered the right side of her face, drew attention. A few strands of her hair were tinged with red, giving her a unique appearance.
+", "The student, Awan, didn’t respond. He just sat there silently, looking indifferent. Awan watched her for a moment, then lazily picked up his bag. Without waiting for her to return, he left the classroom.
+"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("UI/Panel/Vbox1/RichTextLabel:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.9, 3.5, 4.4, 5, 5.9, 6.5, 7.4, 8, 9.9, 10.5, 11.4, 12, 12.9, 13.5, 14.4, 15),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0, 0.0, 1.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Class:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(3.5, 5, 6.5, 8, 10.5, 12, 13.5, 15, 15.4667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"pause"
+}, {
+"args": [],
+"method": &"change_scene"
+}]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Night:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
 
-[node name="Timer" type="Timer" parent="."]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yl2ih"]
+_data = {
+"RESET": SubResource("Animation_av035"),
+"opening": SubResource("Animation_deyiy")
+}
+
+[node name="Story" type="Node2D" node_paths=PackedStringArray("animation_player")]
+script = ExtResource("1_8xxud")
+animation_player = NodePath("AnimationPlayer")
+next_scene = ExtResource("2_pgcna")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="UI"]
+visible = false
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -255.0
+offset_right = 5.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Vbox1" type="VBoxContainer" parent="UI/Panel"]
+layout_mode = 0
+offset_left = 59.0
+offset_right = 1120.0
+offset_bottom = 247.0
+
+[node name="Label" type="Label" parent="UI/Panel/Vbox1"]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/Panel/Vbox1"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("1_cptxm")
+theme_override_font_sizes/normal_font_size = 55
+text = "A voice echoed, its source unknown, but it likely came from the red lights. Moments later, the lights began to move closer.
+"
+scroll_active = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_yl2ih")
+}
+autoplay = "opening"
+
+[node name="Night" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(598, 347)
+scale = Vector2(0.810087, 0.810087)
+texture = ExtResource("1_xt4hd")
+
+[node name="Class" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(593.136, 316.519)
+scale = Vector2(2.20283, 2.20283)
+texture = ExtResource("3_ur47w")
