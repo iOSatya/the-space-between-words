@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cj3xu2yjbb7r6"
-path="res://.godot/imported/Eye.png-0c23340733431d17c0689f73a7eb349f.ctex"
+uid="uid://bnkvhabav87ua"
+path="res://.godot/imported/Dart.png-325d8ca786135dd85411e29959b498d9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Eye.png"
-dest_files=["res://.godot/imported/Eye.png-0c23340733431d17c0689f73a7eb349f.ctex"]
+source_file="res://Assets/Ninja/Dart.png"
+dest_files=["res://.godot/imported/Dart.png-325d8ca786135dd85411e29959b498d9.ctex"]
 
 [params]
 

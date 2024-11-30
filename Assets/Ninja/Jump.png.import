@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cj3xu2yjbb7r6"
-path="res://.godot/imported/Eye.png-0c23340733431d17c0689f73a7eb349f.ctex"
+uid="uid://b6rerw2omvq3k"
+path="res://.godot/imported/Jump.png-91b3cbc52a23239fb7f9151eb10fb789.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Eye.png"
-dest_files=["res://.godot/imported/Eye.png-0c23340733431d17c0689f73a7eb349f.ctex"]
+source_file="res://Assets/Ninja/Jump.png"
+dest_files=["res://.godot/imported/Jump.png-91b3cbc52a23239fb7f9151eb10fb789.ctex"]
 
 [params]
 
