@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://nyf078f4lwd5"]
+[gd_scene load_steps=9 format=3 uid="uid://nyf078f4lwd5"]
 
 [ext_resource type="Script" path="res://Scripts/StoryScript.gd" id="1_8xxud"]
 [ext_resource type="FontFile" uid="uid://u5ccc0dhtw56" path="res://Assets/Font/m5x7.ttf" id="1_cptxm"]
 [ext_resource type="Texture2D" uid="uid://dhiohuad1cm00" path="res://Assets/Backgrounds/Night.jpg" id="1_xt4hd"]
+[ext_resource type="PackedScene" uid="uid://6m4unktjfkjc" path="res://Scenes/MainMenuScene.tscn" id="2_pgcna"]
 [ext_resource type="Texture2D" uid="uid://c7gbmovj2o5ml" path="res://Assets/Backgrounds/Class.jpeg" id="3_ur47w"]
 
 [sub_resource type="Animation" id="Animation_av035"]
@@ -135,8 +136,8 @@ tracks/4/path = NodePath(".")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(3.5, 5, 6.5, 8, 10.5, 12, 13.5, 15),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(3.5, 5, 6.5, 8, 10.5, 12, 13.5, 15, 15.4667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "values": [{
 "args": [],
 "method": &"pause"
@@ -161,6 +162,9 @@ tracks/4/keys = {
 }, {
 "args": [],
 "method": &"pause"
+}, {
+"args": [],
+"method": &"change_scene"
 }]
 }
 tracks/5/type = "value"
@@ -185,6 +189,7 @@ _data = {
 [node name="Story" type="Node2D" node_paths=PackedStringArray("animation_player")]
 script = ExtResource("1_8xxud")
 animation_player = NodePath("AnimationPlayer")
+next_scene = ExtResource("2_pgcna")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
