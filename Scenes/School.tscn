@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=3 format=3 uid="uid://chnhtrcp062ob"]
 
 [ext_resource type="PackedScene" uid="uid://cehbhnukfabc8" path="res://Scenes/awan.tscn" id="1_q02xk"]
@@ -17,3 +18,8 @@ zoom = Vector2(3, 3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("WorldBoundaryShape2D_j1ymc")
+=======
+[gd_scene format=3 uid="uid://4dwjsjyij0k5"]
+
+[node name="School" type="Node2D"]
+>>>>>>> Stashed changes
