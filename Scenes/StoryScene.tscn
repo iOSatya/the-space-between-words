@@ -1,9 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://nyf078f4lwd5"]
+[gd_scene load_steps=9 format=3 uid="uid://bqy5xip6pirod"]
 
 [ext_resource type="Script" path="res://Scripts/StoryScript.gd" id="1_8xxud"]
 [ext_resource type="FontFile" uid="uid://u5ccc0dhtw56" path="res://Assets/Font/m5x7.ttf" id="1_cptxm"]
 [ext_resource type="Texture2D" uid="uid://dhiohuad1cm00" path="res://Assets/Backgrounds/Night.jpg" id="1_xt4hd"]
-[ext_resource type="PackedScene" uid="uid://6m4unktjfkjc" path="res://Scenes/MainMenuScene.tscn" id="2_pgcna"]
+[ext_resource type="PackedScene" uid="uid://bpodq8c4gqwej" path="res://Scenes/MainMenuScene.tscn" id="2_pgcna"]
 [ext_resource type="Texture2D" uid="uid://c7gbmovj2o5ml" path="res://Assets/Backgrounds/Class.jpeg" id="3_ur47w"]
 
 [sub_resource type="Animation" id="Animation_av035"]
