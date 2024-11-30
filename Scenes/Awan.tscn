@@ -1,6 +1,7 @@
-[gd_scene load_steps=23 format=3 uid="uid://cr31nwog1g3pd"]
+[gd_scene load_steps=24 format=3 uid="uid://cr31nwog1g3pd"]
 
 [ext_resource type="Texture2D" uid="uid://7wwoshm5qsx0" path="res://Assets/Awan/Idle.png" id="1_4s7yc"]
+[ext_resource type="Script" path="res://Scripts/Awan.gd" id="1_13s74"]
 [ext_resource type="Texture2D" uid="uid://ci8jlnk5vpyqw" path="res://Assets/Awan/Walk.png" id="2_n0klr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k5ymt"]
@@ -142,16 +143,18 @@ animations = [{
 height = 64.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
-position = Vector2(142, 249)
+position = Vector2(138, 190)
 scale = Vector2(4, 4)
+script = ExtResource("1_13s74")
 
 [node name="animateIdle" type="AnimatedSprite2D" parent="."]
+visible = false
 sprite_frames = SubResource("SpriteFrames_q1lu0")
-frame_progress = 0.190956
+frame_progress = 0.903077
 
 [node name="animateWalk" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_y7pon")
-frame_progress = 0.00534902
+frame_progress = 0.414951
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-4, 32)
