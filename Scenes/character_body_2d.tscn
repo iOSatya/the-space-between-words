@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://77yerd0h4swc"]
+
+[ext_resource type="Texture2D" uid="uid://7wwoshm5qsx0" path="res://Assets/Awan/Idle.png" id="1_ne04i"]
+[ext_resource type="Script" path="res://Scripts/character_body_2d.gd" id="1_pmdkp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vbehw"]
+size = Vector2(20, 69)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(555, 222)
+scale = Vector2(3, 3)
+script = ExtResource("1_pmdkp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.333336, 32.5)
+shape = SubResource("RectangleShape2D_vbehw")
+
+[node name="Idle" type="Sprite2D" parent="."]
+position = Vector2(3.66666, 3)
+texture = ExtResource("1_ne04i")
+hframes = 7
