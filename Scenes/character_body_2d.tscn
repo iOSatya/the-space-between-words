@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://77yerd0h4swc"]
+[gd_scene load_steps=13 format=3 uid="uid://77yerd0h4swc"]
 
 [ext_resource type="Texture2D" uid="uid://7wwoshm5qsx0" path="res://Assets/Awan/Idle.png" id="1_ne04i"]
 [ext_resource type="Script" path="res://Scripts/character_body_2d.gd" id="1_pmdkp"]
@@ -75,6 +75,22 @@ _data = {
 "idle_right": SubResource("Animation_wfvop")
 }
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rfkpo"]
+animation = &"idle_left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_llx1s"]
+animation = &"idle_right"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_kirlh"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_rfkpo")
+blend_point_0/pos = Vector2(-1, 0)
+blend_point_1/node = SubResource("AnimationNodeAnimation_llx1s")
+blend_point_1/pos = Vector2(1, 0)
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_8bbct"]
+states/idle/node = SubResource("AnimationNodeBlendSpace2D_kirlh")
+states/idle/position = Vector2(405, 100)
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(555, 222)
 scale = Vector2(3, 3)
@@ -85,7 +101,6 @@ position = Vector2(-0.333336, 32.5)
 shape = SubResource("RectangleShape2D_vbehw")
 
 [node name="Idle" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(4.33334, 3)
 texture = ExtResource("1_ne04i")
 hframes = 7
@@ -99,3 +114,8 @@ hframes = 7
 libraries = {
 "": SubResource("AnimationLibrary_7jega")
 }
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_8bbct")
+anim_player = NodePath("../AnimationPlayer")
+parameters/idle/blend_position = Vector2(0.354531, -0.669421)
