@@ -86,6 +86,7 @@ blend_point_0/node = SubResource("AnimationNodeAnimation_rfkpo")
 blend_point_0/pos = Vector2(-1, 0)
 blend_point_1/node = SubResource("AnimationNodeAnimation_llx1s")
 blend_point_1/pos = Vector2(1, 0)
+blend_mode = 1
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_8bbct"]
 states/idle/node = SubResource("AnimationNodeBlendSpace2D_kirlh")
@@ -118,4 +119,4 @@ libraries = {
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_8bbct")
 anim_player = NodePath("../AnimationPlayer")
-parameters/idle/blend_position = Vector2(0.354531, -0.669421)
+parameters/idle/blend_position = Vector2(-0.63434, 0.146006)
