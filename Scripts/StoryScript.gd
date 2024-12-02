@@ -13,4 +13,4 @@ func pause():
 		animation_player.pause()
 
 func change_scene():
-	get_tree().change_scene_to_packed(next_scene)
+	Global.change_scene_with_save("res://Scenes/game.tscn")
