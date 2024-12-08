@@ -24,8 +24,9 @@ func _physics_process(delta):
 func player_falling(delta):
 	if !is_on_floor():
 		velocity.y += GRAVITY * delta
-	if velocity.y > 0:
-		current_state = State.Fall
+		if velocity.y >= 0:
+			current_state = State.Fall
+
 
 func player_jump(delta):
 	if Input.is_action_just_pressed("jump") and is_on_floor():
@@ -56,7 +57,7 @@ func player_animation():
 		animated_sprite_2d.play("Idle")
 	elif current_state == State.Run and is_on_floor():
 		animated_sprite_2d.play("Run")
-	elif current_state == State.Jump and animated_sprite_2d.animation != "Fall":
+	elif current_state == State.Jump and animated_sprite_2d.animation != "Jump":
 		animated_sprite_2d.play("Jump")
 	elif current_state == State.Fall and animated_sprite_2d.animation != "Fall":
 		animated_sprite_2d.play("Fall")
