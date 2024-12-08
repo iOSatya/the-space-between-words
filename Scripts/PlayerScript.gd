@@ -46,7 +46,8 @@ func player_run(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		
 	if direction != 0:
-		current_state = State.Run
+		if is_on_floor():
+			current_state = State.Run
 		if direction < 0:
 			animated_sprite_2d.flip_h = true
 		else:
@@ -55,7 +56,7 @@ func player_run(delta):
 func player_animation():
 	if current_state == State.Idle:
 		animated_sprite_2d.play("Idle")
-	elif current_state == State.Run and is_on_floor():
+	elif current_state == State.Run:
 		animated_sprite_2d.play("Run")
 	elif current_state == State.Jump and animated_sprite_2d.animation != "Jump":
 		animated_sprite_2d.play("Jump")
