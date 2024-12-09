@@ -5,5 +5,14 @@
 
 [node name="BaseLevel" instance=ExtResource("1_fben3")]
 
-[node name="EnemyNinja" parent="." index="3" instance=ExtResource("2_6r65e")]
+[node name="EnemyNinja" parent="." index="3" node_paths=PackedStringArray("patrol_points") instance=ExtResource("2_6r65e")]
 position = Vector2(-262, 305)
+patrol_points = NodePath("PatrolPoints")
+
+[node name="PatrolPoints" type="Node2D" parent="EnemyNinja" index="2"]
+
+[node name="Point1" type="Marker2D" parent="EnemyNinja/PatrolPoints" index="0"]
+position = Vector2(-171, 4)
+
+[node name="Point2" type="Marker2D" parent="EnemyNinja/PatrolPoints" index="1"]
+position = Vector2(221, 5)
