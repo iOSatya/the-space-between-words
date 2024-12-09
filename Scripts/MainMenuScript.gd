@@ -2,7 +2,7 @@ extends Control
 
 func _on_NewGameButton_pressed():
 	# Load the first level of your game
-	Global.change_scene_with_save("res://Scenes/Level1Scene.tscn")
+	Global.change_scene_with_save("res://Scenes/BaseLevelScene.tscn")
 
 func _on_ContinueButton_pressed():
 	# Load saved game data (you'll need a save system for this)
