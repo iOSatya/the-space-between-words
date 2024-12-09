@@ -12,7 +12,7 @@ var current_state
 func _ready():
 	current_state = State.Idle
 	
-func _physics_process(delta):
+func _physics_process(delta: float):
 	player_falling(delta)
 	player_idle(delta)
 	player_run(delta)

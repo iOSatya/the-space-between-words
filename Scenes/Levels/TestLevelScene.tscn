@@ -1,5 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://ciwbcawhgk7b5"]
+[gd_scene load_steps=3 format=3 uid="uid://ciwbcawhgk7b5"]
 
 [ext_resource type="PackedScene" uid="uid://dhjnsr8643fa" path="res://Scenes/BaseLevelScene.tscn" id="1_fben3"]
+[ext_resource type="PackedScene" uid="uid://bs4g02rmpn2rh" path="res://Scenes/EnemyNinjaScene.tscn" id="2_6r65e"]
 
 [node name="BaseLevel" instance=ExtResource("1_fben3")]
+
+[node name="EnemyNinja" parent="." index="3" instance=ExtResource("2_6r65e")]
+position = Vector2(-262, 305)
