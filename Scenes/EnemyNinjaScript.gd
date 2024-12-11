@@ -22,6 +22,7 @@ func _ready():
 		current_state = State.Idle
 	else:
 		print("No Patrol Points")
+		
 func _physics_process(delta: float):
 	enemy_falling(delta)
 	enemy_idle(delta)
