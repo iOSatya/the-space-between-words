@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://b6q4bxxxf4k13"]
+[gd_scene load_steps=34 format=3 uid="uid://b6q4bxxxf4k13"]
 
 [ext_resource type="Texture2D" uid="uid://7wwoshm5qsx0" path="res://Assets/Awan/Idle.png" id="1_4s7yc"]
 [ext_resource type="Script" path="res://Scripts/awan.gd" id="1_ookmw"]
@@ -33,14 +33,6 @@ region = Rect2(640, 0, 128, 128)
 atlas = ExtResource("1_4s7yc")
 region = Rect2(768, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3lpv2"]
-atlas = ExtResource("4_fwfb7")
-region = Rect2(384, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_84fhv"]
-atlas = ExtResource("4_fwfb7")
-region = Rect2(512, 0, 128, 128)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_jcd6a"]
 atlas = ExtResource("4_fwfb7")
 region = Rect2(896, 0, 128, 128)
@@ -52,10 +44,6 @@ region = Rect2(1024, 0, 128, 128)
 [sub_resource type="AtlasTexture" id="AtlasTexture_spxkv"]
 atlas = ExtResource("4_fwfb7")
 region = Rect2(1152, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ulo4l"]
-atlas = ExtResource("4_fwfb7")
-region = Rect2(768, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a20mw"]
 atlas = ExtResource("4_fwfb7")
@@ -155,17 +143,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3lpv2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_84fhv")
-}],
-"loop": false,
-"name": &"jump_double",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_jcd6a")
 }, {
 "duration": 1.0,
@@ -176,15 +153,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"jump_end",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ulo4l")
-}],
-"loop": true,
-"name": &"jump_loop",
-"speed": 5.0
+"speed": 4.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -261,7 +230,7 @@ script = ExtResource("1_ookmw")
 position = Vector2(-59, -64.5)
 scale = Vector2(0.921875, 0.949219)
 sprite_frames = SubResource("SpriteFrames_tpxrn")
-animation = &"jump_loop"
+animation = &"jump_start"
 autoplay = "idle"
 centered = false
 
