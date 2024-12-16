@@ -1,9 +1,10 @@
-[gd_scene load_steps=29 format=3 uid="uid://b2esnblty38me"]
+[gd_scene load_steps=31 format=3 uid="uid://b2esnblty38me"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerScript.gd" id="1_ibw1u"]
 [ext_resource type="Texture2D" uid="uid://7wwoshm5qsx0" path="res://Assets/Awan/Idle.png" id="1_lkqrn"]
 [ext_resource type="Texture2D" uid="uid://d0rx2swn0wqdm" path="res://Assets/Awan/Run.png" id="2_hentk"]
 [ext_resource type="Texture2D" uid="uid://duhqlxruaduah" path="res://Assets/Awan/Jump.png" id="2_nv4uk"]
+[ext_resource type="PackedScene" uid="uid://cujp1p2wjalhc" path="res://Scenes/interaction_area.tscn" id="5_qdtj5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3dtjg"]
 atlas = ExtResource("2_nv4uk")
@@ -190,6 +191,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yb6ni"]
 size = Vector2(31, 73)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_6s4mo"]
+radius = 88.0
+
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
 script = ExtResource("1_ibw1u")
@@ -203,3 +207,9 @@ autoplay = "Idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-4.5, -36.5)
 shape = SubResource("RectangleShape2D_yb6ni")
+
+[node name="InteractionArea" parent="." instance=ExtResource("5_qdtj5")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(-3, -41)
+shape = SubResource("CircleShape2D_6s4mo")

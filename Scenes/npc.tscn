@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://cfq86soto71k6"]
+
+[ext_resource type="Script" path="res://Scripts/npc.gd" id="1_dqgc4"]
+[ext_resource type="Texture2D" uid="uid://drqrq8ek13n73" path="res://Assets/Hana/Idle.png" id="1_fsqux"]
+[ext_resource type="PackedScene" uid="uid://cujp1p2wjalhc" path="res://Scenes/interaction_area.tscn" id="2_ehy86"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s08rd"]
+size = Vector2(20, 58)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_747i7"]
+radius = 55.6597
+
+[node name="Npc" type="StaticBody2D"]
+script = ExtResource("1_dqgc4")
+
+[node name="Idle" type="Sprite2D" parent="."]
+position = Vector2(0, -26)
+texture = ExtResource("1_fsqux")
+hframes = 10
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 5)
+shape = SubResource("RectangleShape2D_s08rd")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_ehy86")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_747i7")
