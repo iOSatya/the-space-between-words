@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4di8g6yhm671"]
+
+[ext_resource type="PackedScene" uid="uid://db7f4ux6dxwcm" path="res://scenes/upper_spike.tscn" id="1_tag4q"]
+
+[node name="Lower Spike" instance=ExtResource("1_tag4q")]
+
+[node name="Sprite2D" parent="." index="0"]
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, 2)

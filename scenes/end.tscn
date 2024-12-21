@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://baw7lpp1jxq5m"]
+
+[node name="End" type="Node2D"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -33.0
+offset_top = -12.0
+offset_right = 46.0
+offset_bottom = 12.0
+text = "THE END"
+fit_content = true
+
+[node name="Camera2D" type="Camera2D" parent="RichTextLabel"]
+position = Vector2(33, 12)

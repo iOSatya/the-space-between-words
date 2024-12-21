@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://db7f4ux6dxwcm"]
+
+[ext_resource type="PackedScene" uid="uid://xwrfxmc5ixb6" path="res://scenes/killzone.tscn" id="1_7udbs"]
+[ext_resource type="Texture2D" uid="uid://dp70ur4w8shfc" path="res://assets/tiles/Spike.png" id="2_6o35r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0rghy"]
+radius = 7.0
+
+[node name="Upper Spike" instance=ExtResource("1_7udbs")]
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_6o35r")
+region_enabled = true
+region_rect = Rect2(32, 0, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_0rghy")
